@@ -5,7 +5,7 @@ ingress:
     external-dns/private: "true"
     external-dns.alpha.kubernetes.io/target: traefik-internal.staging.perchwell.com
     traefik.ingress.kubernetes.io/router.entrypoints: websecure-internal
-    traefik.ingress.kubernetes.io/router.middlewares: traefik-okta-oidc-testapp1-default@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: default-okta-oidc-testapp1@kubernetescrd
   hosts:
     - host: testapp1.staging.perchwell.com
       paths:

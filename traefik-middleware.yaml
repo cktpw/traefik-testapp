@@ -1,0 +1,13 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: okta-oidc-testapp1
+spec:
+  plugin:
+    traefik-oidc-auth:
+      CallbackUri: /oauth2/callback
+      Provider:
+        ClientID: urn:k8s:secret:okta-oidc-testapp1:clientId
+        ClientSecret: urn:k8s:secret:okta-oidc-testapp1:clientSecret
+        Url: https://perchwell.okta.com
+      Secret: urn:k8s:secret:okta-oidc-testapp1:secret
