@@ -5,6 +5,7 @@ ingress:
     external-dns/private: "true"
     external-dns.alpha.kubernetes.io/target: traefik-internal.staging.perchwell.com
     traefik.ingress.kubernetes.io/router.entrypoints: websecure-internal
+    traefik.ingress.kubernetes.io/router.middlewares: default-github-oauth2-testapp2@kubernetescrd
   hosts:
     - host: testapp2.staging.perchwell.com
       paths:
